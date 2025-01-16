@@ -1,0 +1,123 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Responsive Form</title>
+    <style>
+        *{
+            box-sizing: border-box;
+        }
+        body{
+            font-family: Arial, Helvetica, sans-serif;
+            font-size: 26px;
+            background-color: #f4f4f4;
+        }
+        h1{
+            text-align: center;
+            color: #333;
+        }
+        #wrapper{
+            background-color: slategrey;
+            list-style: none;
+            margin: 0 auto;
+            padding: 20px;
+            border-radius: 8px;
+
+        }
+        li{
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+        li label{
+            flex: 1;
+            color:white;
+        }
+        li input{
+            flex: 2;
+            padding: 10px;
+            border: 1px solid #ccc;
+            border-radius: 4px;
+        }
+        li:last-child{
+            margin-bottom: 0;
+        }
+        .submit-btn{
+            text-align: right;
+        }
+        .submit-btn input{
+            padding: 10px 20px;
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+        }
+        .submit-btn input:hover{
+            background-color: #0056b3;
+        }
+
+        @media screen and (min-width:300px) and (max-width:500px)
+        {
+            #wrapper li{
+                flex-direction: column;
+            }
+            li input{
+                flex:3
+            }
+        }
+
+        @media screen and (min-width:500px)
+        {
+            li input{
+                flex:4;
+            }
+        }
+        @media screen and (min-width:768px)
+        {
+            li input{
+                flex:6;
+            }
+        }
+        @media screen and (min-width:992px)
+        {
+            li input{
+                flex:8;
+            }
+        }
+        @media screen and (min-width:1200px)
+        {
+            li input{
+                flex:10;
+            }
+        }
+    </style>
+</head>
+<body>
+    <h1>Basic Responsive Form</h1>
+    <form action="">
+        <ul id="wrapper">
+            <li>
+                <label for="name">Name:</label>
+                <input type="text">
+            </li>
+            <li>
+                <label for="Age">Age</label>
+                <input type="text">
+            </li>
+            <li>
+                <label for="Address">Address</label>
+                <input type="text">
+            </li>
+            <li>
+                <label for="Country">Country</label>
+                <input type="text">
+            </li>
+           <li class="submit-btn">
+            <input type="submit" value="Submit">
+           </li>
+        </ul>
+    </form>
+</body>
+</html>
