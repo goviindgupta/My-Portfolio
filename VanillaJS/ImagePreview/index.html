@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Image Preview on File Upload</title>
+    <style>
+        .image-preview {
+            width: 300px;
+            min-height: 100px;
+            border: 2px solid #dddddd;
+            margin-top: 15px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-weight: bold;
+            color: #cccccc;
+            position: relative;
+        }
+        .image-preview__image {
+            display: none;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <h1>Image Preview on File Upload</h1>
+    <input type="file" name="inpFile" id="inpFile">
+
+    <div class="image-preview" id="imagePreview">
+        <img src="" alt="Image Preview" class="image-preview__image">
+        <span class="image-preview__default-text">Image Preview</span>
+    </div>
+
+    <script>
+        const inpFile = document.getElementById('inpFile');
+        const previewContainer = document.getElementById('imagePreview');
+        const previewImage = previewContainer.querySelector('.image-preview__image');
+        const previewDefaultText = previewContainer.querySelector('.image-preview__default-text'); // ✅ Fixed typo
+
+        inpFile.addEventListener('change', function () {
+            const file = this.files[0];
+
+            if (file) {
+                const reader = new FileReader();
+
+                previewDefaultText.style.display = "none";
+                previewImage.style.display = "block";
+
+                reader.addEventListener('load', function () {
+                    previewImage.setAttribute("src", this.result);
+                });
+
+                reader.readAsDataURL(file);
+            } else {
+                previewDefaultText.style.display = "block";  // ✅ Show default text when no file
+                previewImage.style.display = "none";         // ✅ Hide image
+                previewImage.setAttribute("src", "");
+            }
+        });
+    </script>
+</body>
+</html>
