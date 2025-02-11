@@ -1,0 +1,149 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+}
+
+body {
+    background: linear-gradient(to right, #001F3F, #007BFF);
+    color: white;
+    text-align: center;
+}
+
+header {
+    padding: 20px;
+    background: url('https://source.unsplash.com/1600x900/?stars,space') no-repeat center;
+    background-size: cover;
+}
+
+header h1 {
+    font-size: 2rem;
+}
+
+header p {
+    margin-top: 5px;
+    font-size: 1.2rem;
+}
+
+nav {
+    margin-top: 15px;
+}
+
+nav a {
+    padding: 10px 20px;
+    margin: 5px;
+    border: none;
+    background-color: white;
+    color: #007BFF;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+nav a.active {
+    background-color: #007BFF;
+    color: white;
+}
+
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 80vh;
+}
+
+.form-box {
+    background: white;
+    width: 60%;
+    display: flex;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.left-box {
+    width: 35%;
+    background: linear-gradient(to right, #001F3F, #007BFF);
+    color: white;
+    padding: 40px;
+    text-align: center;
+}
+
+.left-box h2 {
+    font-size: 1.8rem;
+}
+
+.left-box p {
+    margin: 15px 0;
+}
+
+.login-btn {
+    background-color: white;
+    color: #007BFF;
+    border: none;
+    padding: 10px 20px;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.login-btn:hover {
+    background-color: #0056b3;
+    color: white;
+}
+
+.right-box {
+    width: 65%;
+    padding: 40px;
+    color: black;
+}
+
+.right-box h2 {
+    font-size: 1.5rem;
+    margin-bottom: 20px;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+.input-group {
+    display: flex;
+    gap: 15px;
+    margin-bottom: 15px;
+}
+
+.input-group input {
+    width: 50%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+.gender {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.register-btn {
+    background-color: #007BFF;
+    color: white;
+    padding: 10px;
+    border: none;
+    font-size: 1rem;
+    cursor: pointer;
+    border-radius: 20px;
+    transition: 0.3s;
+    text-decoration: none;
+}
+
+.register-btn:hover {
+    background-color: #0056b3;
+}

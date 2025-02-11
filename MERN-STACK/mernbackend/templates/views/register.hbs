@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Registration</title>
+    <link rel="stylesheet" href="css/style.css">
+    <script>
+        function showForm(formType) {
+            document.getElementById('registerForm').style.display = formType === 'register' ? 'block' : 'none';
+            document.getElementById('loginForm').style.display = formType === 'login' ? 'block' : 'none';
+        }
+    </script>
+</head>
+<body>
+    <header>
+        <h1>Welcome to Mern Backend Registration Form</h1>
+        <p>The best Registration Form using Mern</p>
+        <nav>
+           <a href="#" class="active" onclick="showForm('register'); return false;">Registration</a>
+    <a href="#" onclick="showForm('login'); return false;">Login</a>
+        </nav>
+    </header>
+
+    <div class="container">
+        <div class="form-box">
+            <div class="left-box">
+                <h2>Welcome</h2>
+                <p>to the mern backend registration form</p>
+                <button class="login-btn" onclick="showForm('login')">Login</button>
+            </div>
+
+            <div class="right-box">
+                <!-- Registration Form -->
+                {{>register}}
+                <!-- Login Form (Initially Hidden) -->
+                {{>login}}
+            </div>
+
+        </div>
+    </div>
+</body>
+</html>

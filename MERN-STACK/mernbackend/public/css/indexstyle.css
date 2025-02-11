@@ -1,0 +1,106 @@
+/* --- Global Reset and Base Styles --- */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: Arial, sans-serif;
+  }
+  
+  body {
+    background: #f4f4f4;
+    color: #333;
+    text-align: center;
+  }
+  
+  /* --- Header Styles --- */
+  header {
+    background: linear-gradient(to right, #001F3F, #007BFF);
+    color: white;
+    padding: 20px;
+  }
+  
+  header h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+  
+  header p {
+    font-size: 1.2rem;
+    margin-bottom: 15px;
+  }
+  
+  nav {
+    margin-top: 10px;
+  }
+  
+  nav a {
+    display: inline-block;
+    padding: 10px 20px;
+    margin: 0 5px;
+    text-decoration: none;
+    color: #fff;
+    background-color: rgba(255, 255, 255, 0.3);
+    border-radius: 20px;
+    transition: 0.3s;
+  }
+  
+  nav a:hover,
+  nav a.active {
+    background-color: #fff;
+    color: #007BFF;
+  }
+  
+  /* --- Banner Section --- */
+  .banner {
+    background: url('https://source.unsplash.com/1600x900/?office,workspace') no-repeat center center/cover;
+    color: white;
+    padding: 60px 20px;
+    margin-bottom: 30px;
+  }
+  
+  .banner h2 {
+    font-size: 2rem;
+    margin-bottom: 10px;
+  }
+  
+  .banner p {
+    font-size: 1.2rem;
+  }
+  
+  /* --- Features Section --- */
+  .features {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 20px;
+    padding: 20px;
+  }
+  
+  .feature {
+    background: white;
+    border-radius: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    padding: 20px;
+    flex: 1 1 300px;
+    max-width: 300px;
+  }
+  
+  .feature h3 {
+    font-size: 1.5rem;
+    margin-bottom: 10px;
+  }
+  
+  .feature p {
+    font-size: 1rem;
+    color: #555;
+  }
+  
+  /* --- Footer --- */
+  footer {
+    background: #001F3F;
+    color: white;
+    padding: 15px;
+    text-align: center;
+    margin-top: 30px;
+  }
+  
